@@ -1,15 +1,10 @@
 // packages ( need to use Jest and Inquirer )
 const inquirer = require('inquirer');
 const { emitKeypressEvents } = require('readline');
-const {logoData} = require('./utl/generateFile')
+const { logoData } = require('./utl/generateFile')
 
 // user questions
 const questions = [
-    {
-        type: 'confirm',
-        name: 'fileType',
-        message: 'SVG',
-    },
     {
         type: 'list',
         name: 'shape',
@@ -28,14 +23,9 @@ const questions = [
     {
         type: 'input',
         name: 'message',
-        message: 'What would you like the logo to say?'
+        message: 'What would you like the logo to say? Three characters or less.'
     },
-    {
-        type: 'input',
-        name: 'fontSize',
-        message: 'What fontsize would you like?'
-    }
-
+   
 ]
 
 function logo() {
@@ -43,11 +33,12 @@ function logo() {
         .prompt(questions)
 
         .then((answers) => {
-            if (answers.fileType) {
+            console.log(answers.message.legnth)
+            if (answers.message.length <= 3 && answers.message.length > 0) {
                 return logoData(answers)
             }
             else {
-                return console.log('This program is to make an SVG logo');
+                return console.log('Logo must be greater than 0 characters and less than 4 characters');
             }
         })
         .catch((error) => {
