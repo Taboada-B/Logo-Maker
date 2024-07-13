@@ -1,5 +1,6 @@
 // packages ( need to use Jest and Inquirer )
 const inquirer = require('inquirer');
+const { emitKeypressEvents } = require('readline');
 
 
 // user questions
@@ -27,18 +28,17 @@ const questions = [
 
 ]
 
-
-
 function logo() {
     inquirer
         .prompt(questions)
 
         .then((answers) => {
-            console.log('made it here 1');
-            console.log(answers);
-            // const fileName = 'README.md';
-            // writeToFile(fileName, answers);
-            return render(answers);
+            if (answers.fileType) {
+                return render(answers)
+            }
+            else {
+                return console.log('This program is to make an SVG logo');
+            }
         })
         .catch((error) => {
             console.error('There was an error:', error);
@@ -50,7 +50,5 @@ function render(answers) {
     console.log(answers);
 
 };
-
-
 
 logo();
