@@ -1,7 +1,7 @@
 // packages ( need to use Jest and Inquirer )
 const inquirer = require('inquirer');
 const { emitKeypressEvents } = require('readline');
-
+const {render} = require('./utl/generateFile')
 
 // user questions
 const questions = [
@@ -25,6 +25,11 @@ const questions = [
         name: 'fontColor',
         message: 'Enter color for text color',
     },
+    {
+        type: 'input',
+        name: 'message',
+        message: 'What would you like the logo to say? '
+    }
 
 ]
 
@@ -44,11 +49,5 @@ function logo() {
             console.error('There was an error:', error);
         });
 }
-
-function render(answers) {
-    console.log('we made it here 2');
-    console.log(answers);
-
-};
 
 logo();
