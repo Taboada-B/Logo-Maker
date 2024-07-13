@@ -1,7 +1,7 @@
 // packages ( need to use Jest and Inquirer )
 const inquirer = require('inquirer');
 const { emitKeypressEvents } = require('readline');
-const {render} = require('./utl/generateFile')
+const {logoData} = require('./utl/generateFile')
 
 // user questions
 const questions = [
@@ -28,7 +28,7 @@ const questions = [
     {
         type: 'input',
         name: 'message',
-        message: 'What would you like the logo to say? '
+        message: 'What would you like the logo to say?'
     }
 
 ]
@@ -39,7 +39,7 @@ function logo() {
 
         .then((answers) => {
             if (answers.fileType) {
-                return render(answers)
+                return logoData(answers)
             }
             else {
                 return console.log('This program is to make an SVG logo');
