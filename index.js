@@ -29,6 +29,11 @@ const questions = [
         type: 'input',
         name: 'message',
         message: 'What would you like the logo to say?'
+    },
+    {
+        type: 'input',
+        name: 'fontSize',
+        message: 'What fontsize would you like?'
     }
 
 ]
