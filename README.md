@@ -13,7 +13,7 @@ This project has been made to quickly make simple logos. With a few inputs inclu
 - [Questions](#questions)
 
 ## Installation
-Clone the github repo, and have node js installed.  After that run in you terminal node index.js and follow the prompts. The output will be a new SVG file with the code for that logo.
+Clone the github repo, and have node js installed.  
 
 ## Usage
 Run in you terminal node index.js and follow the prompts. The output will be a new SVG file with the code for that logo.
