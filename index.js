@@ -33,8 +33,8 @@ function logo() {
         .prompt(questions)
 
         .then((answers) => {
-            console.log(answers.message.legnth)
-            if (answers.message.length <= 3 && answers.message.length > 0) {
+            let charLength = answers.message.length;
+            if (charLength<= 3 && charLength> 0) {
                 return logoData(answers)
             }
             else {

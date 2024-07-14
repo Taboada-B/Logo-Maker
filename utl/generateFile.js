@@ -7,28 +7,28 @@ function logoData(answers) {
     // dynamically making filename
     const fileName = `${message}.svg`;
     // initializing data
-    let background = '';
+    let SVGimage = '';
     // picking shape
 
     switch (shape) {
         case 'circle':
-            background =
+            SVGimage=
                 `<circle cx="150" cy="100" r="100" fill="${backgroundColor}"/>
-                    <text x="150" y="120" font-size="86" text-anchor="middle" fill="${fontColor}">
+                    <text x="150" y="120" font-size="72" text-anchor="middle" fill="${fontColor}">
                         <tspan font-weight="bold">${message}</tspan>
                     </text>`;
             break;
         case 'square':
-            background =
+            SVGimage=
                 `<rect x="50" y="0" width="200" height="200" fill="${backgroundColor}"/>
                     <text x="150" y="120" font-size="86" text-anchor="middle" fill="${fontColor}">
                         <tspan font-weight="bold">${message}</tspan>
-                    </text>/>`;
+                    </text>`;
             break;
         case 'triangle':
-            background =
+            SVGimage=
                 `<polygon points="150, 0 275,200 25,200" fill="${backgroundColor}" />
-                    <text x="150" y="140" font-size="48" text-anchor="middle" fill="${fontColor}">
+                    <text x="150" y="150" font-size="48" text-anchor="middle" fill="${fontColor}">
                         <tspan font-weight="bold">${message}</tspan>
                     </text>`;
             break;
@@ -36,8 +36,17 @@ function logoData(answers) {
 
     // writing svg file data
     const SVGfile =
-        `<svg width="300" height="200">
-        ${background}
+        `<?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+        text {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+        ${SVGimage}
         </svg>`
     generateFile(fileName, SVGfile)
 };
@@ -46,7 +55,7 @@ function logoData(answers) {
 function generateFile(fileName, SVGfile) {
     fs.writeFile(fileName, SVGfile, (err) => {
         if (err) throw err;
-        console.log(`Successfully written to ${fileName}`);
+        console.log(`Generated ${fileName}`);
     });
 };
 
