@@ -1,6 +1,5 @@
 // packages ( need to use Jest and Inquirer )
 const inquirer = require('inquirer');
-const { emitKeypressEvents } = require('readline');
 const { logoData } = require('./utl/generateFile')
 
 // user questions
@@ -48,3 +47,7 @@ function dataFilter(answers) {
 };
 
 logo();
+
+module.exports = {
+    dataFilter
+}
