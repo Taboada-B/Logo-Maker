@@ -1,5 +1,5 @@
-# Logo Maker <img src="./utl/img/MIT-logo.jpg" alt="logo" width="30"/>
-
+# Logo Maker <img src="/c/Users/Btabo/Desktop/DU Bootcamp/Challenges/09-challenge/markdown-creator/img" alt="logo" width="30"/>
+<!-- ./utl/img/MIT-logo.jpg -->
 ## Description 
 This project has been made to quickly make simple logos. With a few inputs including shape, colors, and a message, an SVG file will be created.
 
