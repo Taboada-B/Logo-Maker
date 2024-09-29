@@ -1,4 +1,4 @@
-# Logo Maker <img src="/c/Users/Btabo/Desktop/DU Bootcamp/Challenges/09-challenge/markdown-creator/img" alt="logo" width="30"/>
+# Logo Maker <img src="./utl/img/MIT-logo.jpg" alt="logo" width="30"/>
 <!-- ./utl/img/MIT-logo.jpg -->
 ## Description 
 This project has been made to quickly make simple logos. With a few inputs including shape, colors, and a message, an SVG file will be created.
@@ -13,22 +13,26 @@ This project has been made to quickly make simple logos. With a few inputs inclu
 - [Questions](#questions)
 
 ## Installation
-Clone the github repo, and have node js installed.  
+In an integrated terminal, run these commands:
+ ```
+ git clone https://github.com/Taboada-B/Logo-Maker.git
+ npm i
+ npm run start
+ ```
+ Now follow the prompts inorder to make a logo.
 
 ## Usage
 Run in you terminal node index.js and follow the prompts. The output will be a new SVG file with the code for that logo.
 
 <img src="./examples/REI.svg" alt="screenshot" width="400"/>
 
-## URL
-N/A
+## Video Demonstration
+https://youtu.be/RFrzKjhFpyA
 
 ## Credits
-N/A
+Bryan Taboada
 
 ## License
-
-
 
 This project is licensed under the MIT 
 - see the following link for details: [MIT License](https://opensource.org/licenses/MIT)
